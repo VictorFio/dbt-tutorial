@@ -1,0 +1,102 @@
+[0m10:33:43.153315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63d7b2c2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63d76bf8b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63d5dac1f0>]}
+
+
+============================== 10:33:43.156031 | b6359644-82d7-401c-ba36-d66769ca0c5d ==============================
+[0m10:33:43.156031 [info ] [MainThread]: Running with dbt=1.7.8
+[0m10:33:43.156398 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/vfiorello/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init jaffle_shop', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:33:43.156950 [debug] [MainThread]: Starter project path: /home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/include/starter_project
+[0m10:33:43.160825 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:33:43.161118 [info ] [MainThread]: Setting up your profile.
+[0m10:34:15.707047 [error] [MainThread]: Encountered an error:
+
+[0m10:34:15.708259 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/task/init.py", line 264, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/task/init.py", line 181, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/task/init.py", line 165, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/task/init.py", line 131, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m10:34:15.709133 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 32.599648, "process_user_time": 1.392479, "process_kernel_time": 0.050372, "process_mem_max_rss": "112988", "process_in_blocks": "16", "process_out_blocks": "72", "command_success": false}
+[0m10:34:15.709550 [debug] [MainThread]: Command `dbt init` failed at 10:34:15.709449 after 32.60 seconds
+[0m10:34:15.709825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63d7b2c2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63d567cfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f63d567f610>]}
+[0m10:34:15.710114 [debug] [MainThread]: Flushing usage events
+[0m10:34:27.318000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fb6b102b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fb66a38b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fb4d93250>]}
+
+
+============================== 10:34:27.321396 | 041c435b-5ddd-4bd9-bf27-c5b7ea02568f ==============================
+[0m10:34:27.321396 [info ] [MainThread]: Running with dbt=1.7.8
+[0m10:34:27.321817 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/vfiorello/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init jaffle_shop', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:34:27.322391 [debug] [MainThread]: Starter project path: /home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/include/starter_project
+[0m10:34:27.323861 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:34:27.324154 [info ] [MainThread]: Setting up your profile.
+[0m10:34:43.279890 [error] [MainThread]: Encountered an error:
+
+[0m10:34:43.281384 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/task/init.py", line 263, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/dbt/task/init.py", line 244, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/vfiorello/miniconda3/envs/bdnb-build-env/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m10:34:43.282407 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 16.008793, "process_user_time": 1.411814, "process_kernel_time": 0.020168, "process_mem_max_rss": "108600", "process_out_blocks": "72", "command_success": false, "process_in_blocks": "0"}
+[0m10:34:43.282969 [debug] [MainThread]: Command `dbt init` failed at 10:34:43.282834 after 16.01 seconds
+[0m10:34:43.283355 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fb6b102b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fb4d4c250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fb4d93970>]}
+[0m10:34:43.283671 [debug] [MainThread]: Flushing usage events
